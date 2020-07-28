@@ -1,0 +1,90 @@
+/* FONT IMPORTED */
+/* Fira Sans */
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+/** HEADER */
+body {
+  margin: 0px;
+  background-color: #3e302f;
+  font-family: "Quicksand"; }
+
+/** NAVIGATION BAR */
+.TopPart {
+  height: 145px; }
+
+nav {
+  overflow: hidden;
+  background-color: #ecc7ac;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 70px solid #c2a28b; }
+  nav div {
+    display: inline-block;
+    font-size: 22px; }
+    nav div a {
+      color: #927e70;
+      text-decoration: none;
+      padding: 14px; }
+      nav div a:hover {
+        color: #fff; }
+  nav .logo-container {
+    padding-right: 20px;
+    height: 70px; }
+  nav .logo {
+    height: 100%;
+    width: auto; }
+
+.footer {
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ffd8b9; }
+  .footer .footerBar {
+    padding-top: 50px;
+    height: 200px;
+    width: 1280px;
+    background-color: #ffd8b9;
+    overflow: hidden;
+    display: grid;
+    grid-gap: 80px;
+    grid-template-areas: "contactUs services information socialmedia";
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 12px; }
+    .footer .footerBar a {
+      padding: 0;
+      color: #57483c;
+      text-decoration: none; }
+      .footer .footerBar a:hover {
+        color: #fff; }
+    .footer .footerBar ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none; }
+      .footer .footerBar ul li {
+        margin: 0.5em; }
+    .footer .footerBar .contactUs {
+      grid-area: contactUs; }
+    .footer .footerBar .services {
+      grid-area: services; }
+    .footer .footerBar .information {
+      grid-area: information; }
+    .footer .footerBar .socialmedia {
+      grid-area: socialmedia; }
+      .footer .footerBar .socialmedia a {
+        color: #707070; }
+    .footer .footerBar .row {
+      display: flex; }
+      .footer .footerBar .row .column {
+        flex: 50%; }
+      .footer .footerBar .row .header {
+        margin-top: 0.5rem; }

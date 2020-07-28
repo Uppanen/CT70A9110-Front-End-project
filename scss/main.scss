@@ -1,0 +1,117 @@
+$backgroundColor: #ecc7ac;
+$bodyColor: #3e302f;
+$footerColor: #ffd8b9;
+
+/* FONT IMPORTED */
+
+/* Fira Sans */
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+
+/** HEADER */
+body {
+  margin: 0px;
+  background-color: $bodyColor;
+  font-family: "Quicksand";
+}
+/** NAVIGATION BAR */
+.TopPart {
+  height: 145px;
+}
+nav {
+  overflow: hidden;
+  background-color: $backgroundColor;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  // height: 55px;
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 70px solid #c2a28b;
+  div {
+    display: inline-block;
+    font-size: 22px;
+    a {
+      color: #927e70;
+      text-decoration: none;
+      padding: 14px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .logo-container {
+    padding-right: 20px;
+    height: 70px;
+  }
+  .logo {
+    height: 100%;
+    width: auto;
+  }
+}
+.footer {
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background-color: $footerColor;
+  .footerBar {
+    padding-top: 50px;
+    height: 200px;
+    width: 1280px;
+    background-color: $footerColor;
+    overflow: hidden;
+    display: grid;
+    grid-gap: 80px;
+    grid-template-areas: "contactUs services information socialmedia";
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 12px;
+    a {
+      padding: 0;
+      color: #57483c;
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+      }
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      li {
+        margin: 0.5em;
+      }
+    }
+    .contactUs {
+      grid-area: contactUs;
+    }
+    .services {
+      grid-area: services;
+    }
+    .information {
+      grid-area: information;
+    }
+    .socialmedia {
+      grid-area: socialmedia;
+      a {
+        color: #707070;
+      }
+    }
+
+    .row {
+      display: flex;
+      .column {
+        flex: 50%;
+      }
+      .header {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
