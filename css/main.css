@@ -14,17 +14,18 @@ body {
 nav {
   overflow: hidden;
   background-color: #ecc7ac;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   text-align: center;
   list-style-type: none;
   margin: 0;
-  padding: 5px;
+  padding-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 70px solid #c2a28b; }
+  border-bottom: 70px solid #c2a28b;
+  z-index: 1; }
   nav div {
     display: inline-block;
     font-size: 22px; }
@@ -41,17 +42,66 @@ nav {
     height: 100%;
     width: auto; }
 
+.middle-container {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 675px 675px 675px;
+  grid-row-gap: 60px;
+  margin-bottom: 60px; }
+  .middle-container .block {
+    width: 1200px;
+    height: 675px;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 40% 60%; }
+    .middle-container .block .content {
+      backdrop-filter: blur(16px);
+      display: grid;
+      grid-template-rows: 20% 80%; }
+      .middle-container .block .content .title-box {
+        justify-content: center;
+        align-self: center;
+        display: flex; }
+        .middle-container .block .content .title-box .title-text {
+          padding: 15px 30px;
+          background-color: #ffd8b9;
+          font-size: 30px;
+          width: 230px;
+          height: 40px;
+          text-align: center; }
+      .middle-container .block .content .description {
+        color: white;
+        margin: 0px 40px 0px 40px; }
+  .middle-container .block1 {
+    background-image: url("../img/apartment-architecture-art-books-276724.jpg"); }
+  .middle-container .block2 {
+    background-image: url("../img/green-2-seat-sofa-1918291.jpg"); }
+  .middle-container .block3 {
+    background-image: url("../img/photo-of-person-near-swimming-pool-3889843.jpg");
+    grid-template-columns: 60% 40%; }
+  .middle-container .block4 {
+    background-image: url("../img/white-and-green-throw-pillows-1248583.jpg");
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+    display: flex; }
+    .middle-container .block4 .content {
+      height: 200px;
+      width: 400px;
+      display: block;
+      grid-template-rows: unset;
+      font-size: 30px;
+      text-align: center;
+      padding: 15px 30px; }
+
 .footer {
   width: 100%;
   height: 200px;
-  position: fixed;
-  bottom: 0;
   display: flex;
   justify-content: center;
   background-color: #ffd8b9; }
   .footer .footerBar {
     padding-top: 50px;
-    height: 200px;
+    height: 150px;
     width: 1280px;
     background-color: #ffd8b9;
     overflow: hidden;
