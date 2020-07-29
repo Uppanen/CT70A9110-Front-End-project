@@ -20,18 +20,19 @@ body {
 nav {
   overflow: hidden;
   background-color: $backgroundColor;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   // height: 55px;
   text-align: center;
   list-style-type: none;
   margin: 0;
-  padding: 5px;
+  padding-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 70px solid #c2a28b;
+  z-index: 1;
   div {
     display: inline-block;
     font-size: 22px;
@@ -53,17 +54,78 @@ nav {
     width: auto;
   }
 }
+.middle-container {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 675px 675px 675px;
+  grid-row-gap: 60px;
+  margin-bottom: 60px;
+  .block {
+    width: 1200px;
+    height: 675px;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    .content {
+      backdrop-filter: blur(16px);
+      display: grid;
+      grid-template-rows: 20% 80%;
+      .title-box {
+        justify-content: center;
+        align-self: center;
+        display: flex;
+        .title-text {
+          padding: 15px 30px;
+          background-color: $footerColor;
+          font-size: 30px;
+          width: 230px;
+          height: 40px;
+          text-align: center;
+        }
+      }
+      .description {
+        color: white;
+        margin: 0px 40px 0px 40px;
+      }
+    }
+  }
+  .block1 {
+    background-image: url("../img/apartment-architecture-art-books-276724.jpg");
+  }
+  .block2 {
+    background-image: url("../img/green-2-seat-sofa-1918291.jpg");
+  }
+  .block3 {
+    background-image: url("../img/photo-of-person-near-swimming-pool-3889843.jpg");
+    grid-template-columns: 60% 40%;
+  }
+  .block4 {
+    background-image: url("../img/white-and-green-throw-pillows-1248583.jpg");
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+    display: flex;
+    .content {
+      height: 200px;
+      width: 400px;
+      display: block;
+      grid-template-rows: unset;
+      font-size: 30px;
+      text-align: center;
+      padding: 15px 30px;
+    }
+  }
+}
 .footer {
   width: 100%;
   height: 200px;
-  position: fixed;
-  bottom: 0;
+  // position: relative;
+  // bottom: 0px;
   display: flex;
   justify-content: center;
   background-color: $footerColor;
   .footerBar {
     padding-top: 50px;
-    height: 200px;
+    height: 150px;
     width: 1280px;
     background-color: $footerColor;
     overflow: hidden;
