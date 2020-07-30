@@ -1,7 +1,8 @@
+@import "config";
 $backgroundColor: #ecc7ac;
 $bodyColor: #3e302f;
 $footerColor: #ffd8b9;
-
+$textColor2: #f0eeefcc;
 /* FONT IMPORTED */
 
 /* Fira Sans */
@@ -60,6 +61,13 @@ nav {
   grid-template-rows: 675px 675px 675px;
   grid-row-gap: 60px;
   margin-bottom: 60px;
+  a {
+    color: #6c6c6c;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+    }
+  }
   .block {
     width: 1200px;
     height: 675px;
@@ -93,7 +101,50 @@ nav {
     background-image: url("../img/apartment-architecture-art-books-276724.jpg");
   }
   .block2 {
-    background-image: url("../img/green-2-seat-sofa-1918291.jpg");
+    grid-template-columns: 60% 40%;
+    .title-text {
+      padding: 15px 30px;
+      background-color: $textColor2;
+      //backdrop-filter: blur(6px);
+      //backdrop-filter: opacity(80%) blur(6px);
+      font-size: 30px;
+      width: 230px;
+      height: 40px;
+      text-align: center;
+      position: relative;
+      top: 180px;
+      float: right;
+    }
+
+    .leftside {
+      background-image: url("../img/green-2-seat-sofa-1918291.jpg");
+      background-position: top;
+      .title-text1 {
+        background-color: $footerColor;
+        top: 0px;
+        float: right;
+      }
+      .title-text2 {
+        top: 500px;
+        float: left;
+      }
+    }
+    .rightside {
+      grid-template-rows: 50% 50%;
+      display: grid;
+      .title-text {
+        top: 180px;
+        float: right;
+      }
+      .top {
+        background-image: url("../img/two-panel-painting-of-palm-plant-1374125.jpg");
+        background-size: cover;
+      }
+      .bottom {
+        background-image: url("../img/chopping-boards-near-oven-under-hood-2062426.jpg");
+        background-size: cover;
+      }
+    }
   }
   .block3 {
     background-image: url("../img/photo-of-person-near-swimming-pool-3889843.jpg");
@@ -101,9 +152,10 @@ nav {
   }
   .block4 {
     background-image: url("../img/white-and-green-throw-pillows-1248583.jpg");
-    grid-template-columns: 60% 40%;
+    grid-template-columns: unset;
+    grid-template-rows: 35% 65%;
     justify-content: center;
-    display: flex;
+    display: grid;
     .content {
       height: 200px;
       width: 400px;
@@ -126,11 +178,11 @@ nav {
   .footerBar {
     padding-top: 50px;
     height: 150px;
-    width: 1280px;
+    width: 100%;
     background-color: $footerColor;
     overflow: hidden;
     display: grid;
-    grid-gap: 80px;
+    // grid-gap: 80px;
     grid-template-areas: "contactUs services information socialmedia";
     grid-template-columns: repeat(4, 1fr);
     font-size: 12px;
@@ -167,6 +219,7 @@ nav {
     }
 
     .row {
+      padding-left: 20px;
       display: flex;
       .column {
         flex: 50%;
@@ -177,3 +230,4 @@ nav {
     }
   }
 }
+@import "mobile";

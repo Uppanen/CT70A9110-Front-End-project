@@ -1,0 +1,120 @@
+// Larger than 1199px
+@include mediaLg {
+}
+// Larger than 991px
+@include mediaMd {
+  nav {
+    div {
+      font-size: 18px;
+      .logo {
+        width: 250px;
+      }
+    }
+  }
+  .middle-container {
+    .block {
+      grid-template-columns: 60% 40%;
+      width: 100%;
+      font-size: 1.6vw;
+    }
+    .block3 {
+      grid-template-columns: 40% 60%;
+    }
+    .block4 {
+      grid-template-columns: unset;
+    }
+  }
+
+  .footer {
+    .footerBar {
+      width: 100%;
+      grid-gap: 0px;
+    }
+  }
+}
+// Larger than 767px
+@include mediaSm {
+  nav {
+    div {
+      font-size: 16px;
+      .logo {
+        width: 200px;
+      }
+    }
+  }
+  .middle-container {
+    .block {
+      grid-template-columns: 60% 40%;
+      width: 100%;
+      font-size: 1.8vw;
+    }
+    .block3 {
+      grid-template-columns: 20% 80%;
+    }
+    .block4 {
+      grid-template-columns: unset;
+    }
+  }
+
+  .footer {
+    height: 340px;
+    width: 100%;
+    .footerBar {
+      padding-top: 0px;
+      width: 100%;
+      height: 340px;
+      grid-gap: 0px;
+      grid-template-rows: repeat(2, 150px);
+      grid-template-columns: unset;
+      grid-template-areas:
+        "contactUs services"
+        "information socialmedia";
+    }
+  }
+}
+
+// Smaller than 768px
+@include mediaXS {
+  nav {
+    div {
+      display: flex;
+      font-size: 16px;
+      .logo {
+        width: 150px;
+      }
+    }
+  }
+  .middle-container {
+    .block {
+      grid-template-columns: 100% 0%;
+      width: 100%;
+      font-size: 2.4vw;
+    }
+    .block2 {
+      grid-template-columns: 50% 50%;
+    }
+    .block3 {
+      grid-template-columns: 0% 100%;
+      width: 100%;
+      font-size: 2.4vw;
+    }
+    .block4 {
+      grid-template-columns: unset;
+    }
+  }
+  .footer {
+    height: 300px;
+    width: 100%;
+    .footerBar {
+      padding-top: 0px;
+      width: 100%;
+      height: 300px;
+      grid-gap: 0px;
+      grid-template-rows: repeat(2, 150px);
+      grid-template-columns: unset;
+      grid-template-areas:
+        "contactUs services"
+        "information socialmedia";
+    }
+  }
+}

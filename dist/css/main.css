@@ -48,6 +48,11 @@ nav {
   grid-template-rows: 675px 675px 675px;
   grid-row-gap: 60px;
   margin-bottom: 60px; }
+  .middle-container a {
+    color: #6c6c6c;
+    text-decoration: none; }
+    .middle-container a:hover {
+      color: #fff; }
   .middle-container .block {
     width: 1200px;
     height: 675px;
@@ -75,15 +80,48 @@ nav {
   .middle-container .block1 {
     background-image: url("../img/apartment-architecture-art-books-276724.jpg"); }
   .middle-container .block2 {
-    background-image: url("../img/green-2-seat-sofa-1918291.jpg"); }
+    grid-template-columns: 60% 40%; }
+    .middle-container .block2 .title-text {
+      padding: 15px 30px;
+      background-color: #f0eeefcc;
+      font-size: 30px;
+      width: 230px;
+      height: 40px;
+      text-align: center;
+      position: relative;
+      top: 180px;
+      float: right; }
+    .middle-container .block2 .leftside {
+      background-image: url("../img/green-2-seat-sofa-1918291.jpg");
+      background-position: top; }
+      .middle-container .block2 .leftside .title-text1 {
+        background-color: #ffd8b9;
+        top: 0px;
+        float: right; }
+      .middle-container .block2 .leftside .title-text2 {
+        top: 500px;
+        float: left; }
+    .middle-container .block2 .rightside {
+      grid-template-rows: 50% 50%;
+      display: grid; }
+      .middle-container .block2 .rightside .title-text {
+        top: 180px;
+        float: right; }
+      .middle-container .block2 .rightside .top {
+        background-image: url("../img/two-panel-painting-of-palm-plant-1374125.jpg");
+        background-size: cover; }
+      .middle-container .block2 .rightside .bottom {
+        background-image: url("../img/chopping-boards-near-oven-under-hood-2062426.jpg");
+        background-size: cover; }
   .middle-container .block3 {
     background-image: url("../img/photo-of-person-near-swimming-pool-3889843.jpg");
     grid-template-columns: 60% 40%; }
   .middle-container .block4 {
     background-image: url("../img/white-and-green-throw-pillows-1248583.jpg");
-    grid-template-columns: 60% 40%;
+    grid-template-columns: unset;
+    grid-template-rows: 35% 65%;
     justify-content: center;
-    display: flex; }
+    display: grid; }
     .middle-container .block4 .content {
       height: 200px;
       width: 400px;
@@ -102,11 +140,10 @@ nav {
   .footer .footerBar {
     padding-top: 50px;
     height: 150px;
-    width: 1280px;
+    width: 100%;
     background-color: #ffd8b9;
     overflow: hidden;
     display: grid;
-    grid-gap: 80px;
     grid-template-areas: "contactUs services information socialmedia";
     grid-template-columns: repeat(4, 1fr);
     font-size: 12px; }
@@ -133,8 +170,81 @@ nav {
       .footer .footerBar .socialmedia a {
         color: #707070; }
     .footer .footerBar .row {
+      padding-left: 20px;
       display: flex; }
       .footer .footerBar .row .column {
         flex: 50%; }
       .footer .footerBar .row .header {
         margin-top: 0.5rem; }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  nav div {
+    font-size: 18px; }
+    nav div .logo {
+      width: 250px; }
+  .middle-container .block {
+    grid-template-columns: 60% 40%;
+    width: 100%;
+    font-size: 1.6vw; }
+  .middle-container .block3 {
+    grid-template-columns: 40% 60%; }
+  .middle-container .block4 {
+    grid-template-columns: unset; }
+  .footer .footerBar {
+    width: 100%;
+    grid-gap: 0px; } }
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  nav div {
+    font-size: 16px; }
+    nav div .logo {
+      width: 200px; }
+  .middle-container .block {
+    grid-template-columns: 60% 40%;
+    width: 100%;
+    font-size: 1.8vw; }
+  .middle-container .block3 {
+    grid-template-columns: 20% 80%; }
+  .middle-container .block4 {
+    grid-template-columns: unset; }
+  .footer {
+    height: 340px;
+    width: 100%; }
+    .footer .footerBar {
+      padding-top: 0px;
+      width: 100%;
+      height: 340px;
+      grid-gap: 0px;
+      grid-template-rows: repeat(2, 150px);
+      grid-template-columns: unset;
+      grid-template-areas: "contactUs services" "information socialmedia"; } }
+
+@media screen and (max-width: 768px) {
+  nav div {
+    display: flex;
+    font-size: 16px; }
+    nav div .logo {
+      width: 150px; }
+  .middle-container .block {
+    grid-template-columns: 100% 0%;
+    width: 100%;
+    font-size: 2.4vw; }
+  .middle-container .block2 {
+    grid-template-columns: 50% 50%; }
+  .middle-container .block3 {
+    grid-template-columns: 0% 100%;
+    width: 100%;
+    font-size: 2.4vw; }
+  .middle-container .block4 {
+    grid-template-columns: unset; }
+  .footer {
+    height: 300px;
+    width: 100%; }
+    .footer .footerBar {
+      padding-top: 0px;
+      width: 100%;
+      height: 300px;
+      grid-gap: 0px;
+      grid-template-rows: repeat(2, 150px);
+      grid-template-columns: unset;
+      grid-template-areas: "contactUs services" "information socialmedia"; } }
